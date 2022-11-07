@@ -30,7 +30,7 @@ class NovaApplicationServiceProvider extends ServiceProvider
 
         Nova::footer(function ($request) {
             $ip = $request->DogGetIP();
-            $server_ip = $_SERVER['SERVER_ADDR'];
+            $server_ip = $_SERVER['SERVER_ADDR'] ?? 'localhost';
             $footer = 
                 '<center>
                 <p>casinoman\'s: wainwright-casino-dog</p>
